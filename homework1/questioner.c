@@ -21,7 +21,6 @@ int main()
   scanf("%s", name);
 
   while (fscanf(answers, "%s %d", username, &num) == 2) {
-    printf("%s %d\n", username, num);
     if (!(strncmp(username, name, 20))) {
       magicNumber = num;
       break;
@@ -36,7 +35,7 @@ int main()
   }
   else {  
     if (integer == magicNumber) {
-        printf("CORRECT\n");
+        printf("SUCCESS\n");
     }
     else {
       printf("TOO HIGH\n");
