@@ -7,9 +7,7 @@ int main()
   int integer;
 
   printf("What is your name?\n");
-  //getchar();
   scanf("%s", name);
-  
   printf("What is the magic number, %s?\n", name);
   scanf("%s", number);
   integer = atoi(number);
