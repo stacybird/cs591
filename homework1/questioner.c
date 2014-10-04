@@ -37,7 +37,7 @@ int main()
   else {  
     if (integer == magicNumber) {
         printf("CORRECT\n");
-      }
+    }
     else {
       printf("TOO HIGH\n");
     }
