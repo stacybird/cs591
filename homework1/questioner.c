@@ -1,11 +1,13 @@
 #include <stdio.h>
-#include<stdlib.h>
+#include <stdlib.h>
+#include <string.h>
 int main()
 {
   char name[20];
   char username[20];
   char number[20];
   int magicNumber = 12345;
+  int num;
   int integer;
   FILE *answers;
   
@@ -18,9 +20,10 @@ int main()
   printf("What is your name?\n");
   scanf("%s", name);
 
-  while (fscanf(answers, "%s %d", username, &magicNumber) == 2) {
-    printf("%s %d\n", username, magicNumber);
-    if (username == name) {
+  while (fscanf(answers, "%s %d", username, &num) == 2) {
+    printf("%s %d\n", username, num);
+    if (!(strncmp(username, name, 20))) {
+      magicNumber = num;
       break;
     }
   }
